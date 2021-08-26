@@ -15,7 +15,8 @@ sudo apt install /path/download/installer_debian_xxx_vxxx.deb ### 自行替换 d
 例如：
 opkg update; opkg install unzip wget wget https://github.com/v2fly/v2ray-core/releases/download/v4.40.1/v2ray-linux-64.zip unzip -d v2ray-core v2ray-linux-64.zip cp v2ray-core/v2ray v2ray-core/v2ctl /usr/bin chmod +x /usr/bin/v2ray; chmod +x /usr/bin/v2ctl 格外注意你的 OpenWrt 设备的架构，不要下载到不适用于你设备的版本，否则内核将无法运行。Xray 内核可参照此方法安装。
 安装 v2rayA 安装必须的软件包： opkg update opkg install ca-certificates tar curl opkg install ip-full kmod-ipt-nat6 iptables-mod-tproxy iptables-mod-filter 安装二进制可执行文件 从 Github Releases 下载最新版本对应处理器架构的二进制文件。 移动到/usr/bin并给予执行权限：
-mv v2raya /usr/bin/v2raya chmod +x /usr/bin/v2raya 创建服务文件 nano /etc/init.</description></item><item><title>RedHat / openSUSE</title><link>https://v2raya.org/docs/prologue/installation/redhat/</link><pubDate>Mon, 16 Nov 2020 13:59:39 +0100</pubDate><guid>https://v2raya.org/docs/prologue/installation/redhat/</guid><description>安装 V2Ray 内核 / Xray 内核 V2Ray 安装参考：https://github.com/v2fly/fhs-install-v2ray
+mv v2raya /usr/bin/v2raya chmod +x /usr/bin/v2raya 创建服务文件 nano /etc/init.</description></item><item><title>RedHat / openSUSE</title><link>https://v2raya.org/docs/prologue/installation/redhat/</link><pubDate>Mon, 16 Nov 2020 13:59:39 +0100</pubDate><guid>https://v2raya.org/docs/prologue/installation/redhat/</guid><description>Fedora 34/35, CentOS Stream 8 添加copr源 sudo dnf copr enable zhullyb/v2rayA 安装 V2Ray 内核 sudo dnf install v2ray-core 如需Xray内核请参考https://github.com/XTLS/Xray-install
+安装 v2rayA sudo dnf install v2rayA 其他 安装 V2Ray 内核 / Xray 内核 V2Ray 安装参考：https://github.com/v2fly/fhs-install-v2ray
 Xray 安装参考：https://github.com/XTLS/Xray-install
 安装后可以关掉服务，因为v2rayA不依赖于该systemd服务。
 sudo systemctl disable v2ray --now ### Xray 需要替换服务为 xray 安装 v2rayA 下载 rpm 包后运行：
