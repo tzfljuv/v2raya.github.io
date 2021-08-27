@@ -19,4 +19,4 @@ mv v2raya /usr/bin/v2raya chmod +x /usr/bin/v2raya 创建服务文件 nano /etc/
 Xray 安装参考：https://github.com/XTLS/Xray-install
 安装后可以关掉服务，因为v2rayA不依赖于该systemd服务。
 sudo systemctl disable v2ray --now ### Xray 需要替换服务为 xray 安装 v2rayA 下载 rpm 包后运行：
-sudo rpm -i /path/download/installer_redhat_xxx_vxxx.rpm ### 自行替换 rpm 包所在的实际路径</description></item></channel></rss>
+sudo rpm -i /path/download/installer_redhat_xxx_vxxx.rpm ### 自行替换 rpm 包所在的实际路径 注意事项 启动 v2rayA / 设置 v2rayA 自动启动 从 1.</description></item></channel></rss>
