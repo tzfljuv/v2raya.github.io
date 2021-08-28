@@ -6,5 +6,4 @@ npm install Problems with cache Delete the temporary directories:
 npm run clean</description></item><item><title>FAQ</title><link>https://v2raya.org/docs/help/faq/</link><pubDate>Thu, 19 Aug 2021 08:49:31 +0000</pubDate><guid>https://v2raya.org/docs/help/faq/</guid><description>Hyas? Doks is a Hyas theme build by the creator of Hyas.
 Footer notice? Please keep it in place.
 Keyboard shortcuts for search? focus: / select: ↓ and ↑ open: Enter close: Esc Other documentation? Netlify Hugo Can I get support? Create a topic:
-Netlify Community Hugo Forums Doks Discussions Contact the creator? Send h-enk a message:
-Netlify Community Hugo Forums Doks Discussions</description></item></channel></rss>
+Netlify Community Hugo Forums Doks Discussions Contact the creator? Send h-enk a message:</description></item></channel></rss>
