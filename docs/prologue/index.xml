@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>起步 on</title><link>https://v2raya.org/docs/prologue/</link><description>Recent content in 起步 on</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 19 Aug 2021 08:48:45 +0000</lastBuildDate><atom:link href="https://v2raya.org/docs/prologue/index.xml" rel="self" type="application/rss+xml"/><item><title>介绍</title><link>https://v2raya.org/docs/prologue/introduction/</link><pubDate>Thu, 19 Aug 2021 08:48:57 +0000</pubDate><guid>https://v2raya.org/docs/prologue/introduction/</guid><description>起步 本章对 v2rayA 进行上手介绍。
-下载与安装 👉 如果你已经安装了 v2ray-core 和 v2rayA，可以跳过此节。 这一节介绍了如何在各个 Linux 发行版以及 Docker 中运行 v2rayA。 下载与安装 →
-快速上手 👉 如果你对 v2rayA 的基本使用已轻车熟路，可以跳过此节。 这一节将对 v2rayA 的基本使用规则进行介绍。 快速上手 →
+下载与安装 如果你已经安装了 v2ray-core 和 v2rayA，可以跳过此节。
+这一节介绍了如何在各个 Linux 发行版以及 Docker 中运行 v2rayA。 下载与安装 →
+快速上手 如果你对 v2rayA 的基本使用已轻车熟路，可以跳过此节。
+这一节将对 v2rayA 的基本使用规则进行介绍。 快速上手 →
 手册 这一章对 v2rayA 的各个功能进行介绍。侧重点为每个具体功能的用法、表现行为，以及相似功能之间的区别。 手册 →
 高级应用 这一章对 v2rayA 的高级应用进行介绍，它涉及了诸多功能的组合和灵活用法，以完成特定的任务。 高级应用 →</description></item><item><title>快速上手</title><link>https://v2raya.org/docs/prologue/quick-start/</link><pubDate>Mon, 16 Nov 2020 13:59:39 +0100</pubDate><guid>https://v2raya.org/docs/prologue/quick-start/</guid><description>准备 如果你还未安装 v2rayA 或 v2ray-core，请参阅安装一节。如果你需要更换其他的核心，如 Xray-core，请参阅使用其他核心一节。
 开始 如果你通过 2017 端口 如 http://localhost:2017 无法访问 UI 界面，请检查你的服务是否已经启动。相关问题
