@@ -4,10 +4,10 @@
 下载好 v2rayA 的二进制文件后，你需要在你当前目录下新建一个文件夹，用来存放 v2rayA 的二进制文件以及相关配置：
 mkdir ~/.bin/ 然后将二进制文件移动到 bin 文件夹：
 mv ~/Downloads/v2raya ~/.bin/ 下载 V2Ray 核心 / Xray 核心 方法一：从 brew 安装 brew install v2ray ## 或者安装 xray 方法二：手动下载安装 安装 V2Ray：https://www.</description></item><item><title>Windows</title><link>https://v2raya.org/docs/prologue/installation/windows/</link><pubDate>Tue, 31 Aug 2021 14:48:45 +0800</pubDate><guid>https://v2raya.org/docs/prologue/installation/windows/</guid><description>v2rayA 目前不支持 TUN，因此 Windows 之上的透明代理无法启用。安全起见，本 wiki 将以非管理员权限来运行 v2rayA。
-建议从 scoop 安装 v2ray 核心，这样你可以很容易地获取后续更新。可以通过 Qv2ray 的 Mochi 仓库 安装核心。
+建议从 scoop 安装 v2ray 核心，这样你可以很容易地获取后续更新。可以通过 Qv2ray 的 Mochi 仓库 安装核心。不过注意，如果你从 scoop 安装了核心，那么你应该使用实际的核心文件，而不是 scoop\shims 下的外壳，否则将造成内核重启失败故障。
 下载 v2rayA 从 GitHub Releases 或 GitHub Action 下载适用于 Windows 的二进制文件，然后重命名为 v2raya.exe（格外注意 Windows 系统下不能丢失扩展名）。
 下载 V2Ray 核心 / Xray 核心 方法一：从 scoop 安装 scoop install v2ray ## 或者安装 xray 方法二：手动下载安装 安装 V2Ray：https://www.v2fly.org/guide/install.html 安装 Xray：https://xray.sh/document/install.html 下载压缩包之后解压即可。
-运行 v2rayA 以下假设 v2rayA 与核心都保存到了 D 盘的对应文件夹，如果你文件的存放位置不是这些文件夹，那么你需要根据实际情况修改命令。</description></item><item><title>Alpine</title><link>https://v2raya.org/docs/prologue/installation/alpine/</link><pubDate>Mon, 16 Nov 2020 13:59:39 +0100</pubDate><guid>https://v2raya.org/docs/prologue/installation/alpine/</guid><description>安装 V2Ray 内核 / Xray 内核 如果你已经安装了内核，可以跳过此节。
+运行 v2rayA 以下假设 v2rayA 与核心都保存到了 D 盘的对应文件夹，如果你文件的存放位置不是这些文件夹，那么你需要根据实际情况修改命令或配置文件。</description></item><item><title>Alpine</title><link>https://v2raya.org/docs/prologue/installation/alpine/</link><pubDate>Mon, 16 Nov 2020 13:59:39 +0100</pubDate><guid>https://v2raya.org/docs/prologue/installation/alpine/</guid><description>安装 V2Ray 内核 / Xray 内核 如果你已经安装了内核，可以跳过此节。
 V2Ray / Xray 的官方脚本 V2Ray 安装参考：https://github.com/v2fly/alpinelinux-install-v2ray Xray 安装参考：https://github.com/XTLS/alpinelinux-install-xray v2rayA 提供的镜像脚本（推荐） curl -Ls https://mirrors.v2raya.org/alpine-go.sh | sudo ash 安装 v2rayA 下载二进制可执行文件 根据你的平台，从 Release 获取具有 v2raya_linux_xxx 字样的无后缀名文件，并将其重命名为 v2raya，再把 v2raya 移动到 /usr/local/bin 并给予可执行权限。
 示例：
 version=$(curl -s https://apt.v2raya.mzz.pub/dists/v2raya/main/binary-amd64/Packages|grep Version|cut -d' ' -f2) wget https://github.com/v2rayA/v2rayA/releases/download/v$version/v2raya_linux_x64_$version -O v2raya mv ./v2raya /usr/local/bin/ &amp;amp;&amp;amp; chmod +x /usr/local/bin/v2raya 可以使用 arch 命令来查询你的平台架构，比如 x86_64 的架构就需要下载 x64 的版本。
