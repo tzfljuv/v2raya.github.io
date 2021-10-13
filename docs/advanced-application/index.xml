@@ -4,15 +4,16 @@
 如果你使用 systemd，可通过控制服务 v2raya@user.service 以使用某个用户运行，例如：
 systemctl enable --now v2raya@mzz.service 注意，该服务启动后，v2rayA 默认占据 2017 端口。因此如果已有其他实例在 2017 监听，需要先将其关闭，例如：
 systemctl disable --now v2raya.service</description></item><item><title>多节点分流</title><link>https://v2raya.org/docs/advanced-application/multiple-outbound-routing/</link><pubDate>Mon, 16 Nov 2020 13:59:39 +0100</pubDate><guid>https://v2raya.org/docs/advanced-application/multiple-outbound-routing/</guid><description>介绍 v2rayA 支持设置多个出站组（outbound），通过 RoutingA 可以设置根据不同的入站、源地址、目的地址等选择不同的出站，以实现各种复杂功能。
-流媒体分流 流媒体分流即访问不同的流媒体时，使用不同的服务器节点。例如观看奈非时使用可观看奈非的服务器节点，而正常冲浪时使用更快速的 IPLC 节点，BT 下载时使用流量更多的荷兰服务器节点。下面是分流方法：
+流媒体分流 流媒体分流即访问不同的流媒体时，使用不同的服务器节点。例如观看奈非时使用可观看奈非的服务器节点，而正常冲浪时使用更快速的 IPLC 节点，BT 下载时使用流量更多的荷兰服务器节点。
+下面以 Netflix 和 Disney 为例讲述分流方法：
 在 v2rayA 的左上方新增两个出站，名为 Netflix 和 Disney。此时我们有三个出站：proxy、Netflix、Disney。
 依次选择出站，在每个出站的界面中连接特定的服务器节点。
 将“透明代理”选为“与规则端口所选模式一致”；将“规则端口的分流模式”选为“RoutingA”。
 如果你不使用透明代理则无需设置透明代理，只需将“规则端口的分流模式”选为“RoutingA”即可。而后使用规则端口进行代理上网。
 在 RoutingA 设置中，在靠前位置插入如下规则：
 domain(geosite: netflix) -&amp;gt; Netflix domain(geosite: disney) -&amp;gt; Disney 保存并应用，并在 v2rayA 管理界面左上角启动 v2ray-core。
-爬虫分流 爬虫往往需要使用多个代理 IP 加速爬取速度。例如我们需要设置 5 个 IP 组，名为 Crawler1、Crawler2、Crawler3、Crawler4、Crawler5，通过 5 个不同的入站端口分别使用这 5 个 IP 组出口。
-在 v2rayA 的左上方新增 5 个出站，名为 Crawler1、Crawler2、Crawler3、Crawler4、Crawler5。</description></item><item><title>指定 Docker 容器代理</title><link>https://v2raya.org/docs/advanced-application/specify-container-proxy/</link><pubDate>Mon, 16 Nov 2020 13:59:39 +0100</pubDate><guid>https://v2raya.org/docs/advanced-application/specify-container-proxy/</guid><description>指定 Docker 容器代理 此方法只能适用于 v2rayA 与要控制路由的 Docker 容器在同一台机器的情况。
+此时，正常上网流量将使用 proxy 组，Netflix 使用 Netflix 组，而 Disney 使用 Disney 组。
+如果你想使 BT 下载使用某一出站，可参考 BT 下载直连 的方法，将其中的出站名由 direct 改为特定出站即可。</description></item><item><title>指定 Docker 容器代理</title><link>https://v2raya.org/docs/advanced-application/specify-container-proxy/</link><pubDate>Mon, 16 Nov 2020 13:59:39 +0100</pubDate><guid>https://v2raya.org/docs/advanced-application/specify-container-proxy/</guid><description>指定 Docker 容器代理 此方法只能适用于 v2rayA 与要控制路由的 Docker 容器在同一台机器的情况。
 透明代理使用 redirect 模式 正如 BT 下载直连 中所列方法，我们可以控制每一个桥接的 Docker 容器的路由。
 当 BT 应用运行在 Docker 时，默认的网络模式使用桥接模式（&amp;ndash;network=bridge），此时容器会单独获得一个 IP 地址。而 Docker 的默认桥接网络为 172.17.0.0/16，容器会在该地址段中获取一个 IP 使用。如果我们想让所有桥接容器走直连，而特定容器走代理，可使用 RoutingA 进行控制，例如：
 # 将规则插入到较前位置 source(172.17.0.213) -&amp;gt; proxy source(172.17.0.0/16) -&amp;gt; direct 上述规则使得 172.17.0.213 走代理，而 172.17.0.0/16 段直连。
